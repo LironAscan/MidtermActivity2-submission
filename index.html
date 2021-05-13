@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="StuApp">
+<head>
+    <meta charset="utf-8" />
+    <script src="app.js"></script>
+    <script src="angular.min.js"></script>
+    <title>Activity Midterm 2</title>
+</head>
+<body>
+	<h1>Activity Midterm no 2.</h1>
+	<div ng-controller="StuController">
+	<h2><b>First Student</b></h2><br>
+	Full Name: <input type = "text" size="50" ng-model = "studentOne.fullname"><br>
+	First Name: {{studentOne.firstName}} <br>
+	Middle Name: {{studentOne.middleName}} <br>
+	Last Name: {{studentOne.lastName}} <br>
+	Your name is: {{studentOne.fullName}}<br>
+	<br>
+	Strand: {{studentOne.schoolStrand}}<br>
+	Grade: {{studentOne.schoolGrade}}<br>
+	School: {{studentOne.schoolLocale}}<br>
+	<h3>Student grades</h3>
+	<ul>
+		<li ng-repeat="grade in studentOne.classGrade">
+			{{"Subject: " + grade.name + ", Score: " + grade.score}}
+		</li>
+	</ul>
+	Your Grades are: {{studentOne.scoreCollate}}<br>
+	Remarks: {{studentOne.scoreGrade}}
+	</div>
+</body>
+</html>
